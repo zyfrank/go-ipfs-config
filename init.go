@@ -58,10 +58,12 @@ func Init(out io.Writer, nBitsForKeypair int) (*Config, error) {
 		},
 
 		Gateway: Gateway{
-			RootRedirect: "",
-			Writable:     false,
-			NoFetch:      false,
-			PathPrefixes: []string{},
+			GatewaySpec: GatewaySpec{
+				RootRedirect: "",
+				PathPrefixes: []string{},
+			},
+			Writable: false,
+			NoFetch:  false,
 			HTTPHeaders: map[string][]string{
 				"Access-Control-Allow-Origin":  []string{"*"},
 				"Access-Control-Allow-Methods": []string{"GET"},
