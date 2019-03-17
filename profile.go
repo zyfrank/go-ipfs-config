@@ -1,7 +1,7 @@
 package config
 
 import "time"
-
+import "os"
 // Transformer is a function which takes configuration and applies some filter to it
 type Transformer func(c *Config) error
 
